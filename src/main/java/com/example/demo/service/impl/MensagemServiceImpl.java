@@ -12,9 +12,13 @@ public class MensagemServiceImpl implements MensagemService {
 
     @Autowired
     private MensagemRepository mensagemRepository;
-
     @Override
     public List<Mensagem> buscarTodos() {
         return mensagemRepository.findAll();
+    }
+
+    @Override
+    public Mensagem buscarPorId(Integer id){
+        return mensagemRepository.findBy(id);
     }
 }
