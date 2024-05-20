@@ -1,4 +1,4 @@
- create database if not exists squad19;
+create database if not exists squad19;
 
 use squad19;
 
