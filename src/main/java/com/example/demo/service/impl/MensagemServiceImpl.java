@@ -17,4 +17,26 @@ public class MensagemServiceImpl implements MensagemService {
     public List<Mensagem> buscarTodos() {
         return mensagemRepository.findAll();
     }
+    public List<Mensagem> getUnsentMessages() {
+        return mensagemRepository.findAllByEnviadaFalse();
+    }
+
+    public void markAsSent(Mensagem mensagem) {
+    	mensagem.setEnviada(true);
+        mensagemRepository.save(mensagem);
+    }
+
+    
+    public void enviarEmail(String destino, String conteudo) {
+        
+    }
+
+    public void enviarSMS(String destino, String conteudo) {
+        
+    }
+
+    public void enviarNotificacao(String destino, String conteudo) {
+        
+    }
 }
+
