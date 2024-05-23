@@ -5,9 +5,11 @@ import java.util.List;
 import com.example.demo.model.Mensagem;
 
 public interface MensagemService {
-    
-    
-    public List<Mensagem> buscarTodos();
+    List<Mensagem> buscarTodos();
+    Mensagem criar(Mensagem mensagem);
+    Mensagem atualizar(Mensagem mensagem);
+    void  remover(Integer id);
+    Optional<Mensagem> buscarPorId(Integer id);
 
 }
 
